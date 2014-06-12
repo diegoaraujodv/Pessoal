@@ -1,0 +1,25 @@
+static void txttst(Args _args)
+{
+    #File
+    TextBuffer  textBuffer;
+    str         textString;
+    str         clearText;
+    int         newLinePos;
+    str         line;
+    str         field1;
+    str         field2;
+    str         field3;
+    counter     row;
+
+    StringBuilder   strBuilder = new StringBuilder();
+    TextIO          textIO     = new TextIO(@"C:\tst\Frozen.3D.2013.1080p.BluRay.Half-SBS.DTS.x264-PublicHD_clear.srt",#io_write);
+
+    ;
+
+    textBuffer  = new TextBuffer();
+    textBuffer.fromFile(@"C:\tst\Frozen.3D.2013.1080p.BluRay.Half-SBS.DTS.x264-PublicHD.srt");
+    textString  = strColSeq(textBuffer.getText());
+
+    textIO.write(textString);
+
+}
