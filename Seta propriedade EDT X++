@@ -1,0 +1,14 @@
+static void EDTUPRCASE(Args _args)
+{
+    #AOT
+    #Properties
+    str typeName = 'ZinName';
+    TreeNode node = TreeNode::findNode(#ExtendedDataTypesPath + #AOTDelimiter + typeName);
+    str value = node.AOTgetProperty(#PropertyChangeCase);
+    ;
+
+    node.AOTsetProperty(#PropertyChangeCase, "UPPER CASE");
+    node.AOTsave();
+
+    info(value);
+}
